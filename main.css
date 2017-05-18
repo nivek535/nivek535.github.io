@@ -1,0 +1,229 @@
+body{
+  font-family: 'Abel', serif;
+}
+
+hr{
+  width: 60%;
+}
+
+.headerBar{
+  padding-top: 15px;
+  background-color: white;
+  border: none;
+  padding-bottom: 15px;
+}
+
+.headerTitles{
+  color: #222323 !important;
+  letter-spacing: 1px;
+}
+
+.headerName{
+  font-size: 44px;
+  letter-spacing: 8px;
+}
+
+.headerName:hover{
+  cursor: pointer;
+}
+
+.headerTopics{
+  font-size: 20px;
+  background: none;
+  border: none;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.headerTopics:focus{
+  outline: 0;
+}
+
+.bottomBar{
+  letter-spacing: 0.5px;
+  bottom: 0;
+  position: fixed;
+  background-color: #fdfaf8;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #c4c4c4;
+}
+
+.bottomBarTopText{
+  padding-top: 15px;
+  margin-top: 0;
+}
+
+.bottomBarBottomText{
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+.bottomBarName{
+  color: #212020;
+}
+
+.bottomBarName:hover{
+  text-decoration: none;
+  color: #212020;
+}
+
+.topPhoto{
+  position: relative;
+  text-align: center;
+}
+
+.topPhotoImg{
+  width: 100%;
+}
+
+.photoText{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+}
+
+.innerPhotoText{
+  background-color: white;
+  width: 30%;
+  margin-left: 35%;
+  opacity: 0.8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.centerPhotoText{
+  font-size: 60px;
+}
+
+.centerPhotoSubtext{
+  font-size: 28px;
+}
+
+.subHeaderText{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cornerDiv{
+  text-align: center;
+  padding-bottom: 55px;
+  margin-top: 100px;
+}
+
+.cornerDescription{
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.thirtyFiveMM{
+  padding-top: 5px;
+  padding-bottom: 80px;
+  margin-top: 100px;
+}
+
+.thirtyFiveMMCol{
+  width: 60%;
+  margin-left: 20%;
+}
+
+.thirtyFiveImage{
+  border-radius: 5px;
+}
+
+.twentyFourP{
+  margin-top: 150px;
+}
+
+.twentyFourImage{
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+ 
+  padding: 20px;
+  top: 0;
+  bottom:0;
+  left:0;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  width: 60%;
+  height: 350px;
+  position: absolute;
+  transition: all 5s ease-in-out;
+  margin: auto;
+
+  
+}
+
+.popupPhotoDisplay{
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: none
+}
+
+.youtubeVideo{
+  width: 60%;
+  height: 50%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.twentyFourP{
+  padding-bottom: 80px;
+}
+
+.closeButton{
+  margin-left: 46%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+.closeButton:focus{
+  outline: none;
+}
+
+.closeImageButton{
+  margin-left: 46%;
+  background: none;
+  border: none;
+  font-size: 18px;
+}
+
+.closeImageButton:focus{
+  outline: none;
+}
+
+
+.etcClass{
+  margin-bottom: 0;
+  padding-top: 2px;
+  margin-top: 100px;
+}

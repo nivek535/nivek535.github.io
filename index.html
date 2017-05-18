@@ -1,0 +1,158 @@
+<main ng-app="personalPage" ng-controller='ChernController'>
+
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+      <div class="navbar navbar-inverse navbar-fixed-top headerBar">
+        <div class="container headerContainer">
+          <div class="navbar-header">
+            <a class="navbar-brand headerTitles headerName" ng-click="scroll('homePage')"> CHERN AND FRIENDS </a>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <button ng-click="scroll('theCorner')" class="headerTitles headerTopics">The Corner</button>
+              </li>
+              <li>
+                <button ng-click="scroll('thirtyFiveMM')" class="headerTitles headerTopics">35mm</button>
+              </li>
+              <li>
+                <button ng-click="scroll('twentyFourP')" class="headerTitles headerTopics">24p</button>
+              </li>
+              <li>
+                <button ng-click="scroll('etcClass')" class="headerTitles headerTopics">etc</button>
+              </li>
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="topPhoto" ng-if="homePage == 'true'">
+        <img class="topPhotoImg" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale,o_51/v1487314437/DSC03711_eysxem.jpg">
+        <div class="photoText">
+          <div class="innerPhotoText">
+            <p class="centerPhotoText">KEVIN CHERN</p>
+            <p class="centerPhotoSubtext"> Boxer - Marketing Graduate</p>
+            <p class="centerPhotoSubtext"> Semi Professional Photographer</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cornerDiv" id="theCorner"  ng-if="theCorner == 'true'">
+        <h1 class="subHeaderText"> The Corner </h1>
+        <hr>
+        <p class="cornerDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <p class="cornerDescription">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+          quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
+          qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+
+        <br>
+
+        <p class="cornerDescription">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+          mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+          assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+          ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+      </div>
+
+      <div class="thirtyFiveMM" id="thirtyFiveMM" ng-if="thirtyFiveMM == 'true'">
+        <h1 class="subHeaderText"> 35mm </h1>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 thirtyFiveMMCol">
+            <div class="col-md-4">
+              <a href="#popupPhoto" target="_self" ng-click="setCurrentImage(0)">
+              <img class="img-responsive thirtyFiveImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580869/DSC05995_mo90a5.jpg">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#popupPhoto" target="_self" ng-click="setCurrentImage(1)">
+              <img class="img-responsive thirtyFiveImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580901/DSC05139_wkf4gw.jpg">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#popupPhoto" target="_self" ng-click="setCurrentImage(2)">
+              <img class="img-responsive thirtyFiveImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580891/DSC06007_j5ukqw.jpg">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div id="popupPhoto" class="overlay popupPhotoDisplay">
+<!--            <img id="myPhoto" class="img-responsive thirtyFiveImage" src=''> -->
+           <img class="img-responsive" src="{{currImage}}">
+         
+          <button class="closeImageButton" ng-click="endImage()"> Close Photo </button>
+        </div>
+        
+        
+        
+      </div>
+
+
+      <div class="twentyFourP" id="twentyFourP" ng-if="twentyFourP == 'true'">
+        <h1 class="subHeaderText"> 24p </h1>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 thirtyFiveMMCol">
+            <div class="col-md-3">
+              <a href="#firstVideo" target="_self" ng-click="changeDisplayVideo('true'); setCurrentVideo(0)">
+                <img class="img-responsive twentyFourImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580869/DSC05995_mo90a5.jpg">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#firstVideo" target="_self" ng-click="changeDisplayVideo('true'); setCurrentVideo(1)">
+                <img class="img-responsive twentyFourImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580901/DSC05139_wkf4gw.jpg">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#firstVideo" target="_self" ng-click="changeDisplayVideo('true'); setCurrentVideo(2)">
+                <img class="img-responsive twentyFourImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580891/DSC06007_j5ukqw.jpg">
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="#firstVideo" target="_self" ng-click="changeDisplayVideo('true'); setCurrentVideo(3)">
+                <img class="img-responsive twentyFourImage" src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1492580891/DSC06007_j5ukqw.jpg">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="firstVideo" class="overlay" ng-hide="displayVideo == 'false'">
+          <iframe id="myIframe" width="1280" height="720" src='' frameborder="0" allowfullscreen class="youtubeVideo"></iframe>
+          <button class="closeButton" ng-click="endVideo()"> Close Video </button>
+        </div>
+        
+  </div>
+  
+  
+  <div class="etcClass" id="etcClass" ng-if="etc == 'true'">
+    <h1 class="subHeaderText"> etc. </h1>
+    
+    <hr>
+    
+    <p class="cornerDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+    
+  </div>
+
+
+  <div class="bottomBar">
+    <p class="bottomBarTopText"> © Copyright 2017 <a class="bottomBarName"> Kevin Chern </a></p>
+    <p class="bottomBarBottomText"> Designed and Created by <a href="https://christophercypang.github.io/" class="bottomBarName"> Christopher Pang </a></p>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.2/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/angular.youtube-embed/1.7.9/ng-youtube-embed.min.js"></script>
